@@ -25,7 +25,8 @@ def resetStyles():
             }
             
             section.main {
-                background: url('https://www.transparenttextures.com/patterns/brushed-alum-dark.png');
+                background: url('https://raw.githubusercontent.com/sauloajs/datathon/main/src/assets/images/bg-main.png');
+                background-size: cover;
             }
         </style>
     </head>            
