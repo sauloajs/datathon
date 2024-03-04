@@ -9,11 +9,13 @@ resetStyles()
 
 st.markdown("""
 <style>
- * {
-     section.main {
-         background: url('https://raw.githubusercontent.com/sauloajs/datathon/main/src/assets/images/bg-1.png');
-     }
- }
+* {
+    section.main {
+        background: url('https://raw.githubusercontent.com/sauloajs/datathon/main/src/assets/images/bg-1.png');
+        background-size: cover;
+        height: 100% !important;
+    }
+}
 </style>            
 """, unsafe_allow_html=True)
 

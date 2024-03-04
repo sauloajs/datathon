@@ -16,6 +16,14 @@ def resetStyles(backgroundImage: str = 'https://raw.githubusercontent.com/sauloa
                 color: #ccc!important;
                 transition: 0.3s;
             }
+            
+            .nav-link {
+                border-bottom: 1px solid #f69e04!important;
+            }
+            
+            .nav-link:hover {
+                border-bottom: 1px solid #996204!important;
+            }
 
             .esravye0 {
                 gap: 0;
@@ -59,6 +67,11 @@ def resetStyles(backgroundImage: str = 'https://raw.githubusercontent.com/sauloa
             
             .link--active {
                 opacity: 0.7 !important;
+                border-bottom: 1px solid #996204!important;
+            }
+            
+            .color--title {
+                color: #f69e04;
             }
         </style>
     </head>            
