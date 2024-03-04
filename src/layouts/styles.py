@@ -41,6 +41,10 @@ def resetStyles(backgroundImage: str = 'https://raw.githubusercontent.com/sauloa
             header:nth-child(1) {
                 display: none !important;
             }
+            
+            section:nth-child(1) {
+                display: none !important;
+            }
 
             .e1akgbir11 {
                 display: none !important;
