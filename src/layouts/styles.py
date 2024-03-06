@@ -4,8 +4,19 @@ def resetStyles(backgroundImage: str = 'https://raw.githubusercontent.com/sauloa
     st.markdown("""
     <head>
         <style>
+            [data-testid="stVerticalBlock"] > [style*="flex-direction: column;"] > [data-testid="stVerticalBlock"] {
+                padding: 2em 4em 2em 2em;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            
+            .svg-container {
+                background: #fff!important; 
+            }
+        
             * {
                 font-family: "Roboto", sans-serif;
+                overflow-x: hidden;
             }
             
             a {
