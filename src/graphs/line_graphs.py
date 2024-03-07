@@ -3,14 +3,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from src.utils.format_helpers import *
-
-COLOR_PALETTE = {
-    "blue": "#012b66",
-    "yellow": "#f6a522",
-    "orange": "#ff5216",
-    "green": "#1ac7ae",
-    "light_blue": "#017dca"
-}
+from src.utils.colors import *
 
 ABS_PATH = './src/assets/data'
 
@@ -45,32 +38,52 @@ def plot_educational_expenses_graph():
         )
     )
 
-    fig.add_vrect(
-        x0=2000, 
-        x1=2009, 
-        y0=0, 
-        y1=0.66, 
-        opacity=0.9, 
-        layer="below", 
-        line_color=COLOR_PALETTE["orange"]
+    fig.add_trace(
+        go.Scatter(
+            x=[2000, 2009], 
+            y=[5.28, 5.28], 
+            mode='lines',
+            showlegend=False,
+            line=dict(color=COLOR_PALETTE["dark"], width=0.4)
+        ),
+    )
+    
+    fig.add_trace(
+        go.Scatter(
+            x=[2009, 2009], 
+            y=[0, 5.28], 
+            mode='lines',
+            showlegend=False,
+            line=dict(color=COLOR_PALETTE["dark"], width=0.4)
+        ),
+    )
+    
+    fig.add_trace(
+        go.Scatter(
+            x=[2006, 2006],
+            y=[6.32, 0],
+            mode='lines',
+            showlegend=False,
+            line=dict(color=COLOR_PALETTE["dark"], width=0.4)
+        )
+    )
+    
+    fig.add_trace(
+        go.Scatter(
+            x=[2006, 2020],
+            y=[6.32, 6.32],
+            mode='lines',
+            showlegend=False,
+            line=dict(color=COLOR_PALETTE["dark"], width=0.4)
+        )
     )
 
-    fig.add_vrect(
-        x0=2006, 
-        x1=2020, 
-        y0=0, 
-        y1=0.97, 
-        opacity=0.9, 
-        layer="below", 
-        line_width=0.5, 
-        line_color=COLOR_PALETTE["green"]
-    )
 
-    fig.add_annotation(x=2002, y=6, text="Plano Nacional de Educação (PNE)", showarrow=False, font=dict(color=COLOR_PALETTE["orange"], size=12))
-    fig.add_annotation(x=2002, y=5.8, text="Ampliação do investimento público em educação", showarrow=False, font=dict(color=COLOR_PALETTE["orange"], size=12))
+    fig.add_annotation(x=2002, y=7.32, text="Plano Nacional de Educação (PNE)", showarrow=False, font=dict(color=COLOR_PALETTE["dark"], size=12))
+    fig.add_annotation(x=2002, y=6.92, text="Ampliação do investimento público em educação", showarrow=False, font=dict(color=COLOR_PALETTE["dark"], size=12))
 
-    fig.add_annotation(x=2016, y=5.8, text="Fundo de Manutenção e Desenvolvimento", showarrow=False, font=dict(color=COLOR_PALETTE["green"], size=12))
-    fig.add_annotation(x=2016, y=5.6, text="da Educação Básica (FUNDEB)", showarrow=False, font=dict(color=COLOR_PALETTE["green"], size=12))
+    fig.add_annotation(x=2016, y=7.32, text="Fundo de Manutenção e Desenvolvimento", showarrow=False, font=dict(color=COLOR_PALETTE["dark"], size=12))
+    fig.add_annotation(x=2016, y=6.92, text="da Educação Básica (FUNDEB)", showarrow=False, font=dict(color=COLOR_PALETTE["dark"], size=12))
 
     fig.update_layout(
         title='Gastos com educação (% PIB)',
@@ -78,12 +91,12 @@ def plot_educational_expenses_graph():
         xaxis_title='',
         yaxis_title='',
         plot_bgcolor='white',
-        xaxis=dict(showgrid=False, tickfont=dict(color='black')),
+        xaxis=dict(showgrid=False, tickmode='linear', tickfont=dict(color='black'), range=[1999.5, 2020.5]),
         yaxis=dict(showgrid=False, tickmode='linear', tickvals=[0, 5, 10], tickfont=dict(color='black')),
         title_x=0.45,
         legend=dict(x=0.45, y=-0.2, orientation='h', font=dict(color='black')),
         width=1366,
-        paper_bgcolor='white',
+        paper_bgcolor='white'
     )
     
     st.plotly_chart(fig, config= {'displayModeBar': False})

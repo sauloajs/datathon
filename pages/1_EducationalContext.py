@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 from src.layouts.styles import *
 from src.layouts.navbar import *
 from src.layouts.pages.educational_context import *
-from graphs.line_graphs import plot_educational_expenses_graph
+from src.graphs.line_graphs import plot_educational_expenses_graph
 
 st.set_page_config(layout="wide", page_title="Educação - Contexto Educacional", page_icon=":notebook:")
 
@@ -14,7 +14,7 @@ st.markdown("""
 <style>
 * {
     section.main {
-        background: url('https://raw.githubusercontent.com/sauloajs/datathon/main/src/assets/images/bg-1.png');
+        background: url('https://raw.githubusercontent.com/sauloajs/datathon/main/src/assets/images/pssemc2.png');
         background-size: cover;
         height: 100% !important;
     }
