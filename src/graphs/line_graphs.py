@@ -95,7 +95,7 @@ def plot_educational_expenses_graph():
         yaxis=dict(showgrid=False, tickmode='linear', tickvals=[0, 5, 10], tickfont=dict(color='black')),
         title_x=0.45,
         legend=dict(x=0.45, y=-0.2, orientation='h', font=dict(color='black')),
-        width=1366,
+        width=1300,
         paper_bgcolor='white'
     )
     
@@ -131,19 +131,17 @@ def plot_poverty_rate_graph():
     )
 
     fig.update_layout(
-        title='',
-        xaxis_title='',
-        yaxis_title='',
         plot_bgcolor='white',
-        xaxis=dict(showgrid=False, tickmode='linear', tickvals=[1981, 2021], tickfont=dict(color='black')),
+        xaxis=dict(showgrid=False, tickmode='linear', tickvals=[1981, 2021], tickfont=dict(color='black'), tickangle=-45),
         yaxis=dict(showgrid=False, tickvals=[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100], tickfont=dict(color='black'), range=[0, 85]),
         title_x=0.5,
-        legend=dict(x=0.4, y=-0.2, orientation='h'),
+        legend=dict(x=0.2, y=-0.2, orientation='h', font=dict(color='black')),
         font=dict(color='black'),
-        paper_bgcolor='white'
+        paper_bgcolor='white',
+        width=650
     )
     
-    st.plotly_chart(fig, config= {'displayModeBar': False})
+    st.plotly_chart(fig)
     
 
 def plot_life_expectation_graph():
@@ -166,13 +164,15 @@ def plot_life_expectation_graph():
 
     fig.update_layout(
         plot_bgcolor='white',
-        xaxis=dict(showgrid=False, tickmode='linear', tickvals=[1981, 2021], tickangle=-35, tickfont=dict(color='black')),
+        xaxis=dict(showgrid=False, tickmode='linear', tickvals=[1981, 2021], tickangle=-45, tickfont=dict(color='black')),
         yaxis=dict(showgrid=False, tickvals=[50, 55, 60, 65, 70, 75, 80], range=[50, 85], tickfont=dict(color='black')),
         title_x=0.5,
-        legend=dict(x=0.4, y=-0.2, orientation='h')
+        legend=dict(x=0.4, y=-0.2, orientation='h'),
+        width=650,
+        paper_bgcolor='white'
     )
     
-    st.plotly_chart(fig, config= {'displayModeBar': False})
+    st.plotly_chart(fig)
     
 
 def plot_murder_rate_graph():
@@ -198,7 +198,9 @@ def plot_murder_rate_graph():
         xaxis=dict(showgrid=False, tickmode='linear', tickvals=[1990, 2020], tickangle=-35, tickfont=dict(color='black')),
         yaxis=dict(showgrid=False, tickvals=[0, 5, 10, 15, 20, 25, 30, 35], range=[0, 40], tickfont=dict(color='black')),
         title_x=0.5,
-        legend=dict(x=0.4, y=-0.2, orientation='h')
+        legend=dict(x=0.4, y=-0.2, orientation='h'),
+        paper_bgcolor='white',
+        width=650
     )
     
     st.plotly_chart(fig, config= {'displayModeBar': False})
@@ -245,15 +247,13 @@ def plot_salaries_graph():
 
 
     fig.update_layout(
-        title='',
-        xaxis_title='',
-        yaxis_title='',
         plot_bgcolor='white',
-        xaxis=dict(showgrid=False, tickmode='linear', automargin=True),
-        yaxis=dict(showgrid=False, tickformat=".3f", range=[1, 5], tickvals=[1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]),
-        title_x=0.5,
-        legend=dict(x=0.4, y=-0.2, orientation='h'),
-        margin=dict(l=0, r=50, t=50, b=0, pad=15)
+        xaxis=dict(showgrid=False, tickmode='linear', automargin=True, tickfont=dict(color='black')),
+        yaxis=dict(showgrid=False, tickformat=".3f", range=[1, 5], tickvals=[1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5], tickfont=dict(color='black')),
+        legend=dict(x=0.25, y=-0.2, orientation='h', font=dict(color='black')),
+        margin=dict(l=50, r=50, t=5, b=0, pad=15),
+        paper_bgcolor='white',
+        width=650
     )
     
     st.plotly_chart(fig, config= {'displayModeBar': False})
@@ -300,11 +300,22 @@ def plot_age_distortion_graph():
 
 
     fig.update_layout(
-        title='Homens têm maior defasagem idade-série, especialmente no ensino médio',
+        title={
+            'text':'Homens têm maior defasagem idade-série, especialmente no ensino médio',
+            'font': dict(
+                color='#333',
+                size=12
+            )
+        },
         plot_bgcolor='white',
-        xaxis=dict(showgrid=False, tickmode='linear', automargin=True),
-        yaxis=dict(showgrid=False, tickformat=".2f", ticksuffix="%", range=[0, 16]),
-        title_x=0.5,
-        legend=dict(x=0.4, y=-0.2, orientation='h'),
-        margin=dict(l=0, r=50, t=50, b=0, pad=15)
+        xaxis=dict(showgrid=False, tickmode='linear', automargin=True, tickfont=dict(color='black')),
+        yaxis=dict(showgrid=False, tickformat=".2f", ticksuffix="%", range=[0, 16], tickfont=dict(color='black')),
+        title_x=0.2,
+        legend=dict(x=0.25, y=-0.2, orientation='h', font=dict(color='black')),
+        margin=dict(l=0, r=50, t=50, b=0, pad=15),
+        paper_bgcolor='white',
+        font=dict(color='black'),
+        width=650
     )
+    
+    st.plotly_chart(fig)

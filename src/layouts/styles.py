@@ -5,10 +5,11 @@ def resetStyles(backgroundImage: str = 'https://raw.githubusercontent.com/sauloa
     <head>
         <style>
             [data-testid="stVerticalBlock"] > [style*="flex-direction: column;"] > [data-testid="stVerticalBlock"] {
-                padding: 2em 4em 2em 2em;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                padding-left: 0;
+                padding-right: 0;
                 text-align: center;
             }
+            
             
             .svg-container {
                 background: #fff!important; 
@@ -87,6 +88,18 @@ def resetStyles(backgroundImage: str = 'https://raw.githubusercontent.com/sauloa
             
             .color--title {
                 color: #f69e04;
+            }
+            
+            hr.line--light {
+                color: #ccc;
+                border-bottom: 1px solid #ccc;
+                opacity: 0.7;
+            }
+            
+            hr.line--orange {
+                color: #f69e04;
+                border-bottom: 1px solid #f69e04;
+                opacity: 0.7;
             }
         </style>
     </head>            

@@ -1,5 +1,5 @@
 def replace_comma_with_dot(value):
-    return round(float(value.replace(",", ".")), 3)
+    return round(float(value.replace(",", ".")), 3) if isinstance(value, str) else value
 
 def put_missing_commas(value):
     if isinstance(value, int): 
@@ -10,6 +10,8 @@ def put_missing_commas(value):
     return value
 
 def replace_percentage(value):
-    value = value.replace("%", "")
-    value = value.replace(",", ".")
+    if isinstance(value, str):
+        value = value.replace("%", "")
+        value = value.replace(",", ".")
+        
     return round(float(value), 2)

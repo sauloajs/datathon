@@ -14,21 +14,34 @@ st.markdown("""
 <style>
 * {
     section.main {
-        background: url('https://raw.githubusercontent.com/sauloajs/datathon/main/src/assets/images/pssemc2.png');
+        background: url('https://raw.githubusercontent.com/sauloajs/datathon/main/src/assets/images/bg-b1.png');
+        background-attachment: fixed;
+        background-position: bottom;
+        background-repeat: no-repeat;
         background-size: cover;
-        height: 100% !important;
+        height: 100vh;
+        overflow: hidden;
     }
 }
-</style>            
+</style>        
+<script>
+window.addEventListener('scroll', function() {
+    let offset = window.pageYOffset;
+    document.querySelector('section').style.backgroundPositionY = offset * 0.7 + 'px';
+});
+</script>    
 """, unsafe_allow_html=True)
 
 nav = getNavBarHtml('{educational-context-active}')
-content = getPageContent()
+main = getMainSectionContent()
+comments = getCommentsSectionContent()
 
 st.markdown(nav, unsafe_allow_html=True)
-st.markdown(content, unsafe_allow_html=True)
+st.markdown(main, unsafe_allow_html=True)
 
 container = st.container()
 
 with container:
     fig = plot_educational_expenses_graph()
+    
+st.markdown(comments, unsafe_allow_html=True)
