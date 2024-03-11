@@ -6,19 +6,23 @@ def getHeader():
             <div class="d-flex flex-column">
                 <h2 class="color--title">
                     <hr class="line--light w-25">
-                    A qualidade de vida tem melhorado no Brasil
+                    <span class="color--title">A qualidade de vida tem melhorado no Brasil</span>
                     <hr class="line--light w-100">
                 </h2>
                 <div class="d-flex w-100 justify-content-between">
                     <div class="w-50">
                         <h5 class="color--subtitle">
-                            Redução da pobreza no Brasil
+                            <span class="color--subtitle">
+                                Redução da pobreza no Brasil
+                            </span>
                             <hr class="line--orange w-100">
                         </h5>
                     </div>
                     <div class="w-50">
                         <h5 class="color--subtitle">
-                            A expectativa de vida aumentou nos últimos 10 anos
+                            <span class="color--subtitle">
+                                A expectativa de vida aumentou nos últimos 10 anos
+                            </span>
                             <hr class="line--orange w-100">
                         </h5>
                     </div>
@@ -34,13 +38,17 @@ def getSubHeader():
                 <div class="d-flex w-100 justify-content-between">
                     <div class="w-50">
                         <h5 class="color--subtitle">
-                            População vivendo em favelas reduziu 20% em 16 anos
+                            <span class="color--subtitle">
+                                População vivendo em favelas reduziu 20% em 16 anos
+                            </span>
                             <hr class="line--orange w-100">
                         </h5>
                     </div>
                     <div class="w-50">
                         <h5 class="color--subtitle">
-                            Criminalidade persiste como risco a população
+                            <span class="color--subtitle">
+                                Criminalidade persiste como risco a população
+                            </span>
                             <hr class="line--orange w-100">
                         </h5>
                     </div>

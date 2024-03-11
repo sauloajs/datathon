@@ -18,6 +18,7 @@ def resetStyles(backgroundImage: str = 'https://raw.githubusercontent.com/sauloa
             * {
                 font-family: "Roboto", sans-serif;
                 overflow-x: hidden;
+                color: #000;
             }
             
             a {
@@ -87,17 +88,21 @@ def resetStyles(backgroundImage: str = 'https://raw.githubusercontent.com/sauloa
             }
             
             .color--title {
-                color: #f69e04;
+                color: #f69e04!important;
+            }
+            
+            .color--subtitle {
+                color: #fff!important;
             }
             
             hr.line--light {
-                color: #ccc;
+                color: #ccc!important;
                 border-bottom: 1px solid #ccc;
                 opacity: 0.7;
             }
             
             hr.line--orange {
-                color: #f69e04;
+                color: #f69e04!important;
                 border-bottom: 1px solid #f69e04;
                 opacity: 0.7;
             }

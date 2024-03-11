@@ -116,7 +116,7 @@ def plot_poverty_rate_graph():
             mode='lines', 
             name='Indice de pobreza a U$2.15 por dia (2017) (% da população)', 
             line_color=COLOR_PALETTE["blue"], 
-            line_width=4
+            line_width=4,
         )
     )
 
@@ -134,7 +134,6 @@ def plot_poverty_rate_graph():
         plot_bgcolor='white',
         xaxis=dict(showgrid=False, tickmode='linear', tickvals=[1981, 2021], tickfont=dict(color='black'), tickangle=-45),
         yaxis=dict(showgrid=False, tickvals=[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100], tickfont=dict(color='black'), range=[0, 85]),
-        title_x=0.5,
         legend=dict(x=0.2, y=-0.2, orientation='h', font=dict(color='black')),
         font=dict(color='black'),
         paper_bgcolor='white',
@@ -166,7 +165,6 @@ def plot_life_expectation_graph():
         plot_bgcolor='white',
         xaxis=dict(showgrid=False, tickmode='linear', tickvals=[1981, 2021], tickangle=-45, tickfont=dict(color='black')),
         yaxis=dict(showgrid=False, tickvals=[50, 55, 60, 65, 70, 75, 80], range=[50, 85], tickfont=dict(color='black')),
-        title_x=0.5,
         legend=dict(x=0.4, y=-0.2, orientation='h'),
         width=650,
         paper_bgcolor='white'
@@ -197,7 +195,6 @@ def plot_murder_rate_graph():
         plot_bgcolor='white',
         xaxis=dict(showgrid=False, tickmode='linear', tickvals=[1990, 2020], tickangle=-35, tickfont=dict(color='black')),
         yaxis=dict(showgrid=False, tickvals=[0, 5, 10, 15, 20, 25, 30, 35], range=[0, 40], tickfont=dict(color='black')),
-        title_x=0.5,
         legend=dict(x=0.4, y=-0.2, orientation='h'),
         paper_bgcolor='white',
         width=650
