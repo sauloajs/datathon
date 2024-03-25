@@ -62,3 +62,8 @@ with st.container():
     
     with col2:
         getIegXIndeGraph()
+        
+with st.container():
+    
+    for ano in [2022, 2021, 2020, 2019, 2018, 2017]:
+        getLongCluster(ano)

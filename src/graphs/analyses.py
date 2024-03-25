@@ -47,17 +47,18 @@ def getEngagementClustersGraph():
 
 
 def getLongCluster(ano):
-    X_cluster = df[[f'IEG_{ano}', f'IDA_{ano}', f'INDE_{ano}']].dropna()
-    scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(X_cluster)
+    if f'IEG_{ano}' and f'IDA_{ano}' and f'INDE_{ano}' in df.columns:
+        X_cluster = df[[f'IEG_{ano}', f'IDA_{ano}', f'INDE_{ano}']].dropna()
+        scaler = StandardScaler()
+        X_scaled = scaler.fit_transform(X_cluster)
 
-    kmeans = KMeans(n_clusters=3, random_state=42)
-    df[f'Cluster_{ano}'] = kmeans.fit_predict(X_scaled)
+        kmeans = KMeans(n_clusters=3, random_state=42)
+        df[f'Cluster_{ano}'] = kmeans.fit_predict(X_scaled)
 
-    sns.scatterplot(x=f'IEG_{ano}', y=f'INDE_{ano}', hue=f'Cluster_{ano}', data=df, palette=["#012b66", "#f6a522", "#ff5216"])
-    plt.title(f'Clusters de Engajamento e Desempenho em {ano}')
-    
-    st.pyplot(plt)
+        sns.scatterplot(x=f'IEG_{ano}', y=f'INDE_{ano}', hue=f'Cluster_{ano}', data=df, palette=["#012b66", "#f6a522", "#ff5216"])
+        plt.title(f'Clusters de Engajamento e Desempenho em {ano}')
+        
+        st.pyplot(plt)
     
 def getEngagementWorldCloud(ano):
     if f'DESTAQUE_IEG_{ano}' in df.columns:
