@@ -19,7 +19,8 @@ def getIegXIndeGraph():
     plt.title('Relação entre IEG_2020 e INDE_2020')
     plt.xlabel('IEG_2020')
     plt.ylabel('INDE_2020')
-    plt.show()
+    
+    st.pyplot(plt)
     
 def getEngagementClustersGraph():
     X = df[['IEG_2020']]

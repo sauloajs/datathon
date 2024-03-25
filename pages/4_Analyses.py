@@ -34,9 +34,31 @@ with container:
     col1, col2 = st.columns(2)
     
     with col1:
-        getEngagementWorldCloud(2020)
-        st.markdown(f'<style>div.stFrame {{ max-width: {max_column_width}px; }}</style>', unsafe_allow_html=True)
+        st.markdown("""
+            <img 
+                src="https://raw.githubusercontent.com/sauloajs/datathon/main/src/assets/images/wc2020.png" 
+                alt="Redução da população em favelas em 16 anos" 
+                class="img-fluid" style="width: 650px; height: 455px"
+            />
+        """, unsafe_allow_html=True)
     
     with col2:
-        getEngagementWorldCloud(2022)
-        st.markdown(f'<style>div.stFrame {{ max-width: {max_column_width}px; }}</style>', unsafe_allow_html=True)
+        st.markdown("""
+            <img 
+                src="https://raw.githubusercontent.com/sauloajs/datathon/main/src/assets/images/wc2022.png" 
+                alt="Redução da população em favelas em 16 anos" 
+                class="img-fluid" style="width: 650px; height: 455px"
+            />
+        """, unsafe_allow_html=True)
+        
+        
+with st.container():
+    st.markdown(getSubHeader(), unsafe_allow_html=True)
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        getEngagementClustersGraph()
+    
+    with col2:
+        getIegXIndeGraph()

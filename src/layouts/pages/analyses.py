@@ -19,7 +19,7 @@ def getSubHeader():
                     <div class="w-50">
                         <h5 class="color--subtitle">
                             <span class="color--subtitle">
-                                População vivendo em favelas reduziu 20% em 16 anos
+                                Clusters de engajamento
                             </span>
                             <hr class="line--orange w-100">
                         </h5>
@@ -27,7 +27,7 @@ def getSubHeader():
                     <div class="w-50">
                         <h5 class="color--subtitle">
                             <span class="color--subtitle">
-                                Criminalidade persiste como risco a população
+                                Relação entre IEG_2020 e INDE2020
                             </span>
                             <hr class="line--orange w-100">
                         </h5>
